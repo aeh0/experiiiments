@@ -4,9 +4,7 @@ title: "The story so far..."
 author: "Alison Harvey"
 date: 2022-08-02
 ---
-Hello world!
 
-This is where you can find my thoughts, mistakes, frustrations, and (hopefully) solutions, as I work on my AHRC-RLUK Professional Practice Fellowship. Over the next ten months, I've been released from my day job, Archivist at Cardiff University Special Collections and Archives, to focus solely on a practice-based research question. How can the library develop and deliver a new infrastructure and service to support the sustainable  creation and use  of digital archives, and encourage its adoption through accessible training materials?
 
 But before we get to that - how did I end up here? 
 <!--more--> 
