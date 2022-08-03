@@ -3,18 +3,22 @@ layout: post
 title: "Embedding Universal Viewer"
 date: 2022-08-03
 ---
-<p>Embedding at 560x420
-<iframe src="https://librarysearch.cardiff.ac.uk/view/UniversalViewer/44WHELF_CAR/12206137520002420?iiifVersion=2&updateStatistics=false&c=0&m=0&s=0&cv=0&config=&locales=en-GB:English (GB),cy-GB:Cymraeg,fr-FR:Français (FR),pl-PL:Polski,sv-SE:Svenska,xx-XX:English (GB) (xx-XX)&xywh=-4174,-277,11956,6093&r=0" width="560" height="420" allowfullscreen frameborder="0"></iframe>
-</p>
+<p>Recently I've experienced an issue with embedding the Universal Viewer in other locations. Below are some examples:</p>
 <p>
-Embedding at 640x480
+Embedding at 640x480 - content won't load at all
 <iframe src="https://librarysearch.cardiff.ac.uk/view/UniversalViewer/44WHELF_CAR/12206137520002420?iiifVersion=2&updateStatistics=false&c=0&m=0&s=0&cv=0&config=&locales=en-GB:English (GB),cy-GB:Cymraeg,fr-FR:Français (FR),pl-PL:Polski,sv-SE:Svenska,xx-XX:English (GB) (xx-XX)&xywh=-4174,-277,11956,6093&r=0" width="640" height="480" allowfullscreen frameborder="0"></iframe>
 </p>
 <p>
-Embedding at 800x600
+Embedding at 800x600 - content loads but won't render correctly. The content will only show after clicking << at the top left to restore the metadata panel, clicking >> to restore the contents panel, then clicking on a thumbnail to load the image.
 <iframe src="https://librarysearch.cardiff.ac.uk/view/UniversalViewer/44WHELF_CAR/12206137520002420?iiifVersion=2&updateStatistics=false&c=0&m=0&s=0&cv=0&config=&locales=en-GB:English (GB),cy-GB:Cymraeg,fr-FR:Français (FR),pl-PL:Polski,sv-SE:Svenska,xx-XX:English (GB) (xx-XX)&xywh=-4174,-277,11956,6093&r=0" width="800" height="600" allowfullscreen frameborder="0"></iframe>
 </p>
 <p>
-Embedding at custom (1000x800)
+Embedding at custom (1000x800) - widening the embedded object doesn't resolve the issue
 <iframe src="https://librarysearch.cardiff.ac.uk/view/UniversalViewer/44WHELF_CAR/12206137520002420?iiifVersion=2&updateStatistics=false&c=0&m=0&s=0&cv=0&config=&locales=en-GB:English (GB),cy-GB:Cymraeg,fr-FR:Français (FR),pl-PL:Polski,sv-SE:Svenska,xx-XX:English (GB) (xx-XX)&xywh=-4174,-277,11956,6093&r=0" width="1000" height="750" allowfullscreen frameborder="0"></iframe>
 </p>
+<p>We've redesign webpages and teaching tools to remove embedded instances of UV, but would like to restore them.</p>
+<p>Another recent change we've noticed, is that the viewer's url no longer responds to changes in zoom or viewing position. In this example from the National Library of Wales, the xywh values in the url are responsive - allowing the url to capture and save a particular section and zoom level of an image, and re-use it elsewhere, e.g. <a href>https://viewer.library.wales/4717412#?c=&m=&s=&cv=11&manifest=https%3A%2F%2Fdamsssl.llgc.org.uk%2Fiiif%2F2.0%2F4717412%2Fmanifest.json&xywh=1819%2C978%2C1150%2C871</a></p>
+<p>
+<iframe src="https://viewer.library.wales/build/uv.html#?manifest=https://damsssl.llgc.org.uk/iiif/2.0/4717412/manifest.json&c=0&m=0&s=0&cv=0&config=config/standalone.json&locales=en-GB:English,cy-GB:Cymraeg,fr-FR:Français (FR),sv-SE:Svenska,xx-XX:English (GB) (xx-XX)&xywh=-472,-114,3001,2274&r=0" width="800" height="600" allowfullscreen frameborder="0"></iframe></p>
+<p>Being able to capture a section of an image using its url is something I demonstrated during a presentation earlier this year</p> <iframe width="560" height="315" src="https://www.youtube.com/embed/ywI3tkFO-ts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>I recorded this demo on June 2nd, but when I gave the same demo at an in-person event on 7th, the share link no longer saved the positioning - so something has been changed around that time. If I zoom to a corner of the page (e.g. <a href>https://librarysearch.cardiff.ac.uk/view/UniversalViewer/44WHELF_CAR/12206137520002420</a>), the download option lets me 'download current view' but the share option won't allow me to capture it via url.</p>
