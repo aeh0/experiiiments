@@ -57,24 +57,22 @@ I can never resist a few modifications, and learned the following means of overr
 ```
 Now I could start to make minor, tentative changes. I wanted a short excerpt of each post to show on the home page. This required the following tweaks:
 * Update config.yml to tell it that I want to show excerpts, and that the excerpts should stop whenever it sees the separator I've defined:
+
 ```
 show_excerpts: true
 excerpt_separator: <!--more--> 
 ```
 * Add the separator:
+
 ```
 <!--more-->
 ```
 to every post, at the point I want each excerpt to stop. 
-* Add the third line to the home layout to add a ‘continue reading’ prompt at the end of each excerpt:
+* In the home layout, add this line below {%- if site.show_excerpts -%} to add a ‘continue reading’ prompt at the end of each excerpt:
 
-```python
-{%- if site.show_excerpts -%} 
-    {{ post.excerpt }} 
-    <a class="excerpt-post-link" href="{{ post.url | relative_url }}">Continue reading →</a> 
-    {%- endif -%} 
 ```
-
+<a class="excerpt-post-link" href="{{ post.url | relative_url }}">Continue reading →</a> 
+```
 Modifying the default minima theme from a baseline really appeals to me. Thousands of people use minima, and there's plenty of documentation online to help me out as I get to grips with a completely new area of web design. I think it will help me learn as I go, and I can document any changes on the blog itself. I would like to help other people to build smart, simple, unbranded websites for their research projects, and this feels like a great way for me to start building those skills.
 
 The next step for the Fellowship is to investigate some [issues I've been having recently with our implementation of the Universal Viewer](https://aeh0.github.io/experiiiments/2022/08/08/universal-viewer.html). It's the sort of problem I need to *show* rather than describe, and I think that the blog will be the perfect place to display the results of the tests I've been running, and share the outputs with colleagues who may be able to help me get to the bottom of it.
