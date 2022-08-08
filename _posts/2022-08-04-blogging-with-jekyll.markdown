@@ -67,6 +67,7 @@ excerpt_separator: <!--more-->
 ```
 to every post, at the point I want each excerpt to stop. 
 * Add the third line to the home layout to add a ‘continue reading’ prompt at the end of each excerpt:
+
 ```
 {%- if site.show_excerpts -%} 
     {{ post.excerpt }} 
