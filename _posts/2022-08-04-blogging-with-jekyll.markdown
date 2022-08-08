@@ -1,16 +1,22 @@
 ---
 layout: post
-title: "Blogging with GitHub Pages and Jekyll"
+title: "Blogging without Wordpress"
 author: "Alison Harvey"
 date: 2022-08-04
 ---
 The first thing I wanted to do when I started the Fellowship was set up a blog. Writing is how I plan, how I reflect, how I unpick problems and think my way around them. I'd heard a lot about static site generators, and something called Jekyll, as an alternative to a traditional CMS like Wordpress. It's one of the things I was hoping I would finally have time to explore once the project started - especially given its focus on minimal computing. 
 
+I don’t have anything against Wordpress. It does a lot of things well. But in recent years I’ve seen it become a platform, not just for blogs or personal websites, but for externally funded, academic research outputs. Proprietary blogging and social media platforms are restricted in functionality: their design and accompanying research dictated by the limitations of those platforms. They're precarious: vulnerable to obsolescence and technical failure, institutionally unsupported and unsustainable, creating future compatibility and data migration challenges. These concerns drove and underpinned my application to the Fellowship scheme. 
+
+I was keen to set up a blog to document and communicate the progress of my Fellowship. Wordpress would have done the job, but what better opportunity would I have to explore the alternatives?
+<!--more-->
+I'd heard a lot about static-site generators, and something called jekyll, that apparently worked well with GitHub to create simple, freely-hosted websites. I didn't require much from a blog - just a place to record thoughts and the odd image, in a tidy, systematic way. The idea of being able to start simple, but modify any aspect of appearance or configuration, appealed to me, as someone who has always learned by fiddling with the controls.
+
 Tom Preston-Werner created Jekyll for people that want to ['blog like a hacker'](https://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html). Dash off your thoughts in markdown, pass posts through simple templates, and generate a complete static website, which is freely hosted, version-controlled, and served by GitHub Pages. What's not to like?!
 
-Jeykll is beautifully simple - and with no superfluous functionality or features, and no clunky database, it's blisteringly fast. There's no advertising, branding, or logos. It offers complete control over design, allowing you to create your own theme or customise an uncomplicated base theme, which is great if you're starting out learning about html and css. And yes, it's free!
-<!--more--> 
-My first stop was [GitHub Skills](https://github.com/skills), where I worked through their 'first day' courses. The course on [GitHub Pages](https://github.com/skills/github-pages) got me up and running in no time - I made a blog in a matter of minutes. But I had no real sense of *how* I'd done it, or what any of it meant, so I headed to YouTube in search of something a little more in depth.
+Jeykll is beautifully simple - and with no superfluous functionality or features, and no clunky database, it's blisteringly fast. It's clean and uncluttered - no advertising, branding, or logos. Most importantly for me, it offers complete control over design, allowing you to create your own theme or customise from a simple base theme, which is great for anyone just starting out learning about html and css. And yes, it's free!
+
+My first stop was [GitHub Skills](https://github.com/skills), where I worked through their 'first day' courses. The course on [GitHub Pages](https://github.com/skills/github-pages) got me up and running in no time - I made a blog in a matter of minutes. But at the end, I had no real sense of *how* I'd done it, or what any of it meant, so I headed to YouTube in search of something a little more in depth.
 
 I highly recommend this series of videos by [Mike Dane](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB), which walk you slowly through every single stage of the set up in a very accessible way.
 
@@ -21,10 +27,9 @@ Here's a summary of what you'll need, and proof that you can set up a free, unbr
 * Open the command line.
 * Type the following commands
 ```
-dir [this lists the contents of the current directory]
-cd [name of folder where you want to store your blog - choose from the list you just generated - I used cd Documents]
-jekyll new [name of blog/site]
-cd [name of blog/site]
+cd [name of folder where you want to store your blog]
+jekyll new [blog name]
+cd [blog name]
 bundle add webrick
 bundle exec jekyll serve
 ```
@@ -43,19 +48,19 @@ git push origin gh-pages
 * Paste in your personal access token when prompted.
 * Go to https://[username].github.io/[blogname] and admire your new blog!
 
-Mike Dane's videos explain what to do next, such as how to write post and new pages in markdown. You'll save these files in your local folder, and when you're ready to publish, repeat the Git Bash code block above, from... 
+Mike Dane's videos explain what to do next, such as how to write post and new pages in markdown. You'll save these files in your local folder, and when you're ready to publish your changes, go to Git Bash:
 ```
-git add
+git add . 
+git commit –m "[comment here]" 
+git push origin gh-pages 
 ```
-...onwards. Look at you - blogging like a hacker!
+You can avoid this step by installing GitHub Desktop, which avoids to need to keep a personal access code on hand, but this is optional.
 
-I installed GitHub Desktop which removes the stage of pushing files via Git Bash, and needing to keep my personal access code on hand, but this is optional.
-
-I also had a dig around in my local Ruby folder (C:\Ruby31-x64\lib\ruby\gems\3.1.0\gems\minima-2.5.1), and copied the _includes, _layouts, _sass, and _assets folders. I opened the config.yml file and put a hash in front of the theme:
+I can't resist a few modifications, and learned the following means of overriding the default theme that gets installed (minima). In my local Ruby folder, C:\Ruby31-x64\lib\ruby\gems\3.1.0\gems\minima-2.5.1, I copied the _includes, _layouts, _sass, and _assets folders, and pasted them into my blog folder. I opened the config.yml file and put a hash in front of the theme, cancelling it out:
 ```
 #theme: minima
 ```
-This has allowed me to override the default theme that gets installed, and start to make minor, tentative changes. I wanted a short excerpt of each post to show on the home page, which required the following tweaks:
+Now I could start to make minor, tentative changes. I wanted a short excerpt of each post to show on the home page. This required the following tweaks:
 * Update config.yml:
 ```
 show_excerpts: true
@@ -73,5 +78,5 @@ to every post, wherever I want the excerpt to stop.
     <a class="excerpt-post-link" href="{{ post.url | relative_url }}">Continue reading →</a> 
     {%- endif -%} 
 ```
-Modifying the default minima theme really appeals to me, because I'm all about keeping things simple. I think it will help me learn as I go, and document any changes on the blog itself.
+Modifying the default minima theme gradually really appeals to me, because I'm all about keeping things simple. I think it will help me learn as I go, and document any changes on the blog itself.
 
