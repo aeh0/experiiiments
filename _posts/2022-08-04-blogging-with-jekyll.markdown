@@ -4,7 +4,7 @@ title: "Blogging with Jekyll"
 author: "Alison Harvey"
 date: 2022-08-04
 ---
-The first thing I wanted to do when I started the Fellowship was set up a blog. Writing is how I plan, how I reflect, how I unpick problems and think my way around them. I'd heard a lot about static site generators, and something called Jekyll, as an alternative to a traditional CMS like Wordpress. It's one of the things I was hoping I would finally have time to explore once the project started - especially given its focus on minimal computing.
+The first thing I wanted to do when I started the [Fellowship](https://aeh0.github.io/experiiiments/about/) was set up a blog. Writing is how I plan, how I reflect, how I unpick problems and think my way around them. I'd heard a lot about static site generators, and something called Jekyll, as an alternative to a traditional CMS like Wordpress. It's one of the things I was hoping I would finally have time to explore once the project started - especially given its focus on minimal computing.
 
 Tom Preston-Werner created Jekyll for people that want to ['blog like a hacker'](https://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html). Dash off my thoughts in markdown, pass posts through simple templates, and generate a complete static website, which is secure, freely hosted, version-controlled, and served by GitHub Pages. What's not to like?! I didn't require much from a blog - just a place to record thoughts in a tidy, systematic way. The idea of being able to start simple, but modify any aspect of appearance or configuration, appealed to me, as someone who has always learned by fiddling with the controls.
 <!--more-->
