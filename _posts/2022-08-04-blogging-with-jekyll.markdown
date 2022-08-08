@@ -17,7 +17,7 @@ I highly recommend this series of videos by [Mike Dane](https://www.youtube.com/
 
 Here's a summary of what's needed, and proof that anyone can set up a free, unbranded blog with just a dozen lines of code. 
 
-* Download [Ruby](https://rubyinstaller.org/downloads/) and install Jekyll (instructions for [Mac](https://www.youtube.com/watch?v=WhrU9m82Wm8&list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB&index=2) and [Windows] (https://www.youtube.com/watch?v=LfP7Y9Ja6Qc&list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB&index=3) are in the videos), plus [Git Bash](https://gitforwindows.org/), and a text editor, e.g. [Visual Studio Code](https://code.visualstudio.com/Download) 
+* Download [Ruby](https://rubyinstaller.org/downloads/) and install Jekyll (instructions for [Mac](https://www.youtube.com/watch?v=WhrU9m82Wm8&list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB&index=2) and [Windows](https://www.youtube.com/watch?v=LfP7Y9Ja6Qc&list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB&index=3) are in the videos), plus [Git Bash](https://gitforwindows.org/), and a text editor, e.g. [Visual Studio Code](https://code.visualstudio.com/Download) 
 * [Set up a GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) and create a [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 * Open the command line.
 * Type the following commands
