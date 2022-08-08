@@ -73,5 +73,5 @@ to every post, wherever I want the excerpt to stop.
     <a class="excerpt-post-link" href="{{ post.url | relative_url }}">Continue reading →</a> 
     {%- endif -%} 
 ```
-
+Modifying the default minima theme really appeals to me, because I'm all about keeping things simple. I think it will help me learn as I go, and document any changes on the blog itself.
 
