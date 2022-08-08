@@ -68,7 +68,7 @@ excerpt_separator: <!--more-->
 <!--more-->
 ```
 to every post, at the point I want each excerpt to stop. 
-* In the home layout, add this line below {%- if site.show_excerpts -%} to add a ‘continue reading’ prompt at the end of each excerpt:
+* In the home layout, add this line to add a ‘continue reading’ prompt at the end of each excerpt:
 
 ```
 <a class="excerpt-post-link" href="{{ post.url | relative_url }}">Continue reading →</a> 
