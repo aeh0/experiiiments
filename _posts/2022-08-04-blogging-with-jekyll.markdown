@@ -41,9 +41,9 @@ git remote add origin https://github.com/[username]/[blog name].git
 git push origin gh-pages
 ```
 * Paste in your personal access token when prompted.
-* Go to https://[username].github.io/[blogname] and admire your new blog!
+* Go to https://[username].github.io/[blogname] and admire your gorgeous new blog!
 
-The tutorials in Mike Dane's [playlist](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB) explain what to do next, such as how to write posts and new pages in markdown. These files are saved in a local folder, and when ready to publish changes, run a few commands in Git Bash:
+The tutorials in Mike Dane's [playlist](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB) explain what to do next, such as how to write posts and new pages in markdown. These files are saved in a local folder, and when ready to publish changes, just run a few commands in Git Bash:
 ```
 git add . 
 git commit –m "[comment here]" 
