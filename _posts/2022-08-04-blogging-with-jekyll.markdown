@@ -67,12 +67,13 @@ excerpt_separator: <!--more-->
 ```
 to every post, at the point I want each excerpt to stop. 
 * Add the third line to the home layout to add a ‘continue reading’ prompt at the end of each excerpt:
-~~~
+
+```python
 {%- if site.show_excerpts -%} 
     {{ post.excerpt }} 
     <a class="excerpt-post-link" href="{{ post.url | relative_url }}">Continue reading →</a> 
     {%- endif -%} 
-~~~
+```
 
 Modifying the default minima theme from a baseline really appeals to me. Thousands of people use minima, and there's plenty of documentation online to help me out as I get to grips with a completely new area of web design. I think it will help me learn as I go, and I can document any changes on the blog itself. I would like to help other people to build smart, simple, unbranded websites for their research projects, and this feels like a great way for me to start building those skills.
 
