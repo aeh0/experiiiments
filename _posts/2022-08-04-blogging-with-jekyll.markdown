@@ -49,7 +49,7 @@ git add .
 git commit –m "[comment here]" 
 git push origin gh-pages 
 ```
-You can avoid this step by installing GitHub Desktop, which also avoids to need to keep a personal access code on hand, but this is optional.
+You can avoid this step by installing [GitHub Desktop](https://desktop.github.com/), which also avoids the need to keep a personal access code on hand, but this is optional.
 
 I can never resist a few modifications, and learned the following means of overriding the default theme that gets installed (minima). In my local Ruby folder, C:\Ruby31-x64\lib\ruby\gems\3.1.0\gems\minima-2.5.1, I copied the _includes, _layouts, _sass, and _assets folders, and pasted them into my blog folder. I opened the config.yml file and put a hash in front of the theme, cancelling it out:
 ```
