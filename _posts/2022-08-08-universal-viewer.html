@@ -1,0 +1,45 @@
+---
+layout: post
+title: "Alma Digital: issues with the Universal Viewer"
+date: 2022-08-08
+---
+<p>My first week working on the Fellowship was spent identifying, testing, and documenting some recent issues with <a href="https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1">Alma Digital</a>'s implementation of the Universal Viewer. The Universal Viewer is designed to work with IIIF-enabled images, allowing them to be shared and embedded in other platforms, but I've recently encountered several problems with this functionality.</p>
+</p>
+<ol><li>Cannot copy embed code from the viewer to create an iframe in an external resource</li>
+<li>Zoom/position coordinates (xywh values) missing from url (viewing position cannot be captured by share link)</li>
+<li>Cannot load manifest to most IIIF viewers when pasting to prefixes</li></ol>
+<!--more-->
+<p>Last month, I discovered that a resource guide I'd helped a student build back in May, using embedded IIIF images from Alma Digital, was now failing to render any of the iframes. Facing a deadline and being unable to dedicate sufficient time to explore this in depth, I simply removed the blank iframes and we launched the resource without embedded images, which was much poorer for it. At the start of June, I recorded a presentation in which I demonstrated being able to zoom into a detail of an object, copy a share link from Universal Viewer, and paste the same viewing position into a new tab. When I gave the same presentation a week later, the pasted link reset to the original view.</p>
+<p>While this has been a frustrating start to the project (which entirely depends on being able to re-use Alma Digital objects in third party tools), it's an example of the way in which the Fellowship is giving me much-needed time to unpick issues like this - which affect not just Cardiff University but all Alma Digital customers. In addition, as this blog is hosted on GitHub (a post on this coming soon), it gives me the ability to clearly show and demonstrate behaviour, not just describe it, complete with source code.</p>
+<p>This post will outline and demonstrate the features no longer functioning in the Universal Viewer, as of early June, in the hope that Ex Libris, Alma Digital users, or any IIIF experts out there may be able to offer some advice on any recent updates or conflicts that may be causing this. 
+
+<h3><p>1. Cannot copy embed code from <a href="https://librarysearch.cardiff.ac.uk/view/UniversalViewer/44WHELF_CAR/12206137520002420?iiifVersion=2&updateStatistics=false">the viewer</a> to create an iframe in an external resource. Examples below:</p></h3>
+<p>
+Embedding at 640x480 - content won't load
+<iframe src="https://librarysearch.cardiff.ac.uk/view/UniversalViewer/44WHELF_CAR/12206137520002420?iiifVersion=2&updateStatistics=false&c=0&m=0&s=0&cv=0&config=&locales=en-GB:English (GB),cy-GB:Cymraeg,fr-FR:Français (FR),pl-PL:Polski,sv-SE:Svenska,xx-XX:English (GB) (xx-XX)&xywh=-4174,-277,11956,6093&r=0" width="640" height="480" allowfullscreen frameborder="0"></iframe>
+</p>
+<p>
+Embedding at 800x600 - content loads but won't render correctly. The content will only show after clicking << at the top left to restore the metadata panel, clicking >> to restore the contents panel, then clicking on a thumbnail to load the image.
+<iframe src="https://librarysearch.cardiff.ac.uk/view/UniversalViewer/44WHELF_CAR/12206137520002420?iiifVersion=2&updateStatistics=false&c=0&m=0&s=0&cv=0&config=&locales=en-GB:English (GB),cy-GB:Cymraeg,fr-FR:Français (FR),pl-PL:Polski,sv-SE:Svenska,xx-XX:English (GB) (xx-XX)&xywh=-4174,-277,11956,6093&r=0" width="800" height="600" allowfullscreen frameborder="0"></iframe>
+</p>
+<p>However, scrolling the browser's zoom in and out causes the images to load.</p>
+<h3><p>2. Zoom/position coordinates (xywh values) missing from url (viewing position cannot be captured by share link). Option to download 'current view' still works.</p></h3>
+<p>In this example from the <a href="https://viewer.library.wales/4717412#?c=&m=&s=&cv=11&manifest=https%3A%2F%2Fdamsssl.llgc.org.uk%2Fiiif%2F2.0%2F4717412%2Fmanifest.json&xywh=1819%2C978%2C1150%2C871">National Library of Wales</a>, xywh values in the url allow the capture of particular section and zoom level of an image, in order to re-use it elsewhere. It was formerly possible to do this in Alma Digital, but now the url is static when scrolling in and out of <a href="https://librarysearch.cardiff.ac.uk/view/UniversalViewer/44WHELF_CAR/12206137520002420?iiifVersion=2&updateStatistics=false">the viewer.</a></p>
+<p>
+<h3><p>3. Cannot load manifest to alternative IIIF viewers when pasting to prefixes</p></h3>
+<p>It used to be possible to paste the manifest onto a viewer prefix to load it into an alternative viewer. The following viewers no longer recognise the manifest as valid:</p>
+<ul><li>https://universalviewer.io/uv.html?manifest=</li>
+    <li>https://demo.tify.rocks/demo.html?manifest=</li>
+    <li>http://codh.rois.ac.jp/software/iiif-curation-viewer/demo/?manifest=</li>
+    <li>http://www.getty.edu/art/collection/static/viewers/mirador/?manifest=</li></ul>
+<p>Loading a manifest to the latest version of the Universal Viewer (directly from their website) <strong>https://uv-v4.netlify.app/#?manifest=</strong> works, and has a responsive url. It's now possible to copy the embed code, and render it successfully in an iframe. The correct page is replicated but not the canvas location/zoom (I had zoomed into the signature on page 2 before copying the embed code):</p>
+<p>
+<iframe src="https://uv-v4.netlify.app/uv.html#?manifest=https://librarysearch.cardiff.ac.uk/view/iiif/presentation/44WHELF_CAR/12206137520002420/manifest?iiifVersion=3&c=0&m=0&cv=1&config=&locales=en-GB:English (GB),cy-GB:Cymraeg,fr-FR:Français (FR),pl-PL:Polski,sv-SE:Svenska&xywh=814,827,1485,907&r=0" width="800" height="600" allowfullscreen frameborder="0"></iframe></p>
+<p>However - images, as opposed to texts, will neither load correctly nor embed.</p>
+<iframe src="https://uv-v4.netlify.app/uv.html#?manifest=https://librarysearch.cardiff.ac.uk/view/iiif/presentation/44WHELF_CAR/12206143060002420/manifest?updateStatistics=false&c=0&m=0&cv=0" width="800" height="600" allowfullscreen frameborder="0"></iframe>
+
+<p>I've tested the above across other Alma Digital implementations, and all of the above issues are being replicated identically for those customers too - e.g. embed behaviour:</p>
+<p>National History Museum:</p>
+<iframe src="https://nhm.primo.exlibrisgroup.com/view/UniversalViewer/44NHM_INST/12190875980002081?updateStatistics=false&c=0&m=0&s=0&cv=0&config=&locales=en-GB:English (GB),cy-GB:Cymraeg,fr-FR:Français (FR),pl-PL:Polski,sv-SE:Svenska,xx-XX:English (GB) (xx-XX)&xywh=-1431,414,5357,2539&r=0" width="800" height="600" allowfullscreen frameborder="0"></iframe>
+<p>University of Aberdeen:</p>
+<iframe src="https://abdn.primo.exlibrisgroup.com/view/UniversalViewer/44ABE_INST/12154837730005941?updateStatistics=false&c=0&m=0&s=0&cv=0&config=&locales=en-GB:English (GB),cy-GB:Cymraeg,fr-FR:Français (FR),pl-PL:Polski,sv-SE:Svenska,xx-XX:English (GB) (xx-XX)&xywh=-3642,-1,10013,4096&r=0" width="800" height="600" allowfullscreen frameborder="0"></iframe>
