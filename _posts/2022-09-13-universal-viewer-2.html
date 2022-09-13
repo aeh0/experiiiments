@@ -10,8 +10,8 @@ date: 2022-09-13
 <p>I raised an official case with Ex Libris’ development team on 9th August, and was informed that the issue will be looked at in order of relative priority, with no indication of when that might be. This has made it very difficult to plan the forward progress of the Fellowship.</p> 
 <p>While awaiting progress from Ex Libris, I reached out to a few community contacts for suggestions as to what could be causing the issues. My thanks to Glen Robson at IIIF, Vicky Phillips and Sara Weale, developers at the National Library of Wales, and Ben Crabstick and Carly Richardson, developers at Archives Hub for volunteering their time to look into this with me. Unfortunately, this behaviour seems to have everyone stumped.</p> 
 <p>Andy Irving, Senior Systems Architect at the Bodleian, and a member of the Universal Viewer community on Slack, has been very helpful in suggesting workarounds that involve editing the manifests themselves or the urls.</p>
-<img src="https://aeh0.github.io/experiiiments/blob/971c44cd9d001d36cb0264358b9de89e84a1a4bd/assets/2022-09-13/andy1.jpg" alt="Suggestion to force the production of presentation API 2 by adding the suffix, manifest?iiifVersion=2">
-<img src="https://aeh0.github.io/experiiiments/blob/971c44cd9d001d36cb0264358b9de89e84a1a4bd/assets/2022-09-13/andy2.jpg" alt="Suggestion to change image format in the json from image/tiff to image/jpeg">
+<img src="https://aeh0.github.io/experiiiments/assets/2022-09-13/andy1.jpg" alt="Suggestion to force the production of presentation API 2 by adding the suffix, manifest?iiifVersion=2">
+<img src="https://aeh0.github.io/experiiiments/assets/2022-09-13/andy2.jpg" alt="Suggestion to change image format in the json from image/tiff to image/jpeg">
 <p>With trial and error, I’ve been able to find a method of handcrafting the urls in such a way that our objects will successfully embed in an iframe, and show the correct page/location:</p> 
 <ul>
     <li>Using the prefix: https://universalviewer.io/uv.html?manifest=</li>
