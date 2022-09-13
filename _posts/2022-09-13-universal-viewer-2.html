@@ -9,10 +9,11 @@ date: 2022-09-13
 <p>The lack of this functionality means that our content is effectively trapped within our digital repository, and if even if this limitation were addressed, without url coordinates, we have no control over <em>how</em> to present our objects. We cannot dictate which page, which area of an image to show in an iframe. A major selling point of Alma Digital was its compliance with IIIF (the International Image Interoperability Framework), but currently, our content no longer complies with the framework – it is no longer interoperable.</p> 
 <p>I raised an official case with Ex Libris’ development team on 9th August, and was informed that the issue will be looked at in order of relative priority, with no indication of when that might be. This has made it very difficult to plan the forward progress of the Fellowship.</p> 
 <p>While awaiting progress from Ex Libris, I reached out to a few community contacts for suggestions as to what could be causing the issues. My thanks to Glen Robson at IIIF, Vicky Phillips and Sara Weale, developers at the National Library of Wales, and Ben Crabstick and Carly Richardson, developers at Archives Hub for volunteering their time to look into this with me. Unfortunately, this behaviour seems to have everyone stumped.</p> 
-<p>Andy Irving, Senior Systems Architect at the Bodleian, and a member of the Universal Viewer community on Slack, has been very helpful in suggesting workarounds that involve editing the manifests themselves or the urls.</p>
+<p>Andy Irving, Senior Systems Architect at the Bodleian, and a member of the Universal Viewer community on Slack, has been very helpful in suggesting workarounds that involve editing the json manifests themselves or the urls:</p>
 <img src="https://aeh0.github.io/experiiiments/assets/2022-09-13/andy1.jpg" alt="Suggestion to force the production of presentation API 2 by adding the suffix, manifest?iiifVersion=2">
 <img src="https://aeh0.github.io/experiiiments/assets/2022-09-13/andy2.jpg" alt="Suggestion to change image format in the json from image/tiff to image/jpeg">
-<p>With trial and error, I’ve been able to find a method of handcrafting the urls in such a way that our objects will successfully embed in an iframe, and show the correct page/location:</p> 
+<p></p>
+<p>I'm unable to access our json files, but with some trial and error, I’ve been able to use Andy's tip about forcing the production of presentation API 2 to handcraft urls. Now our objects will successfully embed in an iframe, and show the correct page/location:</p> 
 <ul>
     <li>Using the prefix: https://universalviewer.io/uv.html?manifest=</li>
     <li>Adding our Alma instance: https://librarysearch.cardiff.ac.uk/view/iiif/presentation/44WHELF_CAR/</li>
