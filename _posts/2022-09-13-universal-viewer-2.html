@@ -11,7 +11,7 @@ date: 2022-09-13
 <p>While awaiting progress from Ex Libris, I reached out to a few community contacts for suggestions as to what could be causing the issues. My thanks to Glen Robson at IIIF, Vicky Phillips and Sara Weale, developers at the National Library of Wales, and Ben Crabstick and Carly Richardson, developers at Archives Hub for volunteering their time to look into this with me. Unfortunately, this behaviour seems to have everyone stumped.</p> 
 <p>Andy Irving, Senior Systems Architect at the Bodleian, and a member of the Universal Viewer community on Slack, has been very helpful in suggesting workarounds that involve editing the manifests themselves or the urls. With trial and error, I’ve been able to find a method of handcrafting the urls in such a way that our objects will successfully embed in an iframe, and show the correct page/location:</p> 
 <ul>
-    <li>Using the stem: https://universalviewer.io/uv.html?manifest=</li>
+    <li>Using the prefix: https://universalviewer.io/uv.html?manifest=</li>
     <li>Adding our Alma instance: https://librarysearch.cardiff.ac.uk/view/iiif/presentation/44WHELF_CAR/</li>
     <li>Adding the mms (unique identifier of the object): e.g. 12204337930002420</li>
     <li>Adding a suffix to force the presentation of API v2: /manifest?iiifVersion=2</li>
