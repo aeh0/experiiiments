@@ -22,11 +22,11 @@ By starting small, but thinking big, individuals and organisations can inspire s
 
 ## Project workstreams
 
-**1	ALMA DIGITAL**. Interrogate the capacity of Alma Digital to support the construction of digital archives and online exhibitions. What can it do? What can’t it do? What tools will it integrate with? Develop training material for library staff and researchers. Identify limitations and pursue fixes with Ex Libris. Audience = internal, and potential adopters of Alma Digital (e.g., WHELF). 
+**1.	ALMA DIGITAL**. Interrogate the capacity of Alma Digital to support the construction of digital archives and online exhibitions. What can it do? What can’t it do? What tools will it integrate with? Develop training material for library staff and researchers. Identify limitations and pursue fixes with Ex Libris. Audience = internal, and potential adopters of Alma Digital (e.g., WHELF). 
 
-**2	ONLINE EXHIBITIONS**. Research and evaluate free platforms for online exhibitions, suitable for those without access to Alma Digital. Both ‘flat’ images and IIIF compatible, review of pros and cons. Audience = external.
+**2.	ONLINE EXHIBITIONS**. Research and evaluate free platforms for online exhibitions, suitable for those without access to Alma Digital. Both ‘flat’ images and IIIF compatible, review of pros and cons. Audience = external.
 
-**3	DIGITAL HUMANITIES TOOLKIT**. Research and develop an introductory toolkit for digital humanities activity, to include data mining, text analysis, data visualisation, network analysis, crowdsourcing, computer vision, IIIF. Audience = external.
+**3.	DIGITAL HUMANITIES TOOLKIT**. Research and develop an introductory toolkit for digital humanities activity, to include data mining, text analysis, data visualisation, network analysis, crowdsourcing, computer vision, IIIF. Audience = external.
 
 ## Ongoing activity
 
