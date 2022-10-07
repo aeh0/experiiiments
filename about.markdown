@@ -20,11 +20,18 @@ For several years, I’ve been involved in developing digital projects and provi
 
 By starting small, but thinking big, individuals and organisations can inspire stakeholders and funders to invest in their future. With this in mind, all my learning resources will be free, open access, based on minimal computing, and non-reliant on proprietary learning environments, allowing re-use and adaptation by anyone, anywhere, to support self-development, teaching, research, and creativity.
 
-##Project deliverables
-•	ALMA DIGITAL. Interrogate the capacity of Alma Digital to support the construction of digital archives and online exhibitions. What can/can’t it do? What tools will it integrate with? Write training material for both library staff and researchers. Identify limitations and pursue fixes with Ex Libris. Audience = internal, and potential adopters of Alma Digital (e.g., WHELF). 
-•	ONLINE EXHIBITIONS. Research and evaluate free platforms for online exhibitions, suitable for those without access to Alma Digital. Both ‘flat’ images and IIIF compatible, review of pros and cons. 
-•	INTRO TO DH. Research and develop an introductory toolkit for digital humanities activity, to include data mining, text analysis, data visualisation, network analysis, crowdsourcing, computer vision, IIIF 
-•	INTERNAL COLLABORATION. Work internally to gather requirements, sample content to create proof of concept models, advocate to integrate digital humanities training into research methods offer. How can the library help? 
-•	EXTERNAL COLLABORATION. Explore potential platforms to disseminate training materials, such as Programming Historian, Carpentries Incubator, GitHub Skills. Disseminate via blog posts, publications, conference papers 
-•	DOCUMENTATION. An ongoing process of recording activity and personal growth, reflecting on progress: what have I learned, what have I done, what is going well, where are the areas of concern, what do I need to do next, what are my questions, what don’t I know, where do I need to look for help or information? Use this to generate an end-of-project report to summarise activity, progress, challenges, and identify next steps.
+## Project workstreams
 
+1	ALMA DIGITAL. Interrogate the capacity of Alma Digital to support the construction of digital archives and online exhibitions. What can it do? What can’t it do? What tools will it integrate with? Develop training material for library staff and researchers. Identify limitations and pursue fixes with Ex Libris. Audience = internal, and potential adopters of Alma Digital (e.g., WHELF). 
+
+2	ONLINE EXHIBITIONS. Research and evaluate free platforms for online exhibitions, suitable for those without access to Alma Digital. Both ‘flat’ images and IIIF compatible, review of pros and cons. Audience = external.
+
+3	DIGITAL HUMANITIES TOOLKIT. Research and develop an introductory toolkit for digital humanities activity, to include data mining, text analysis, data visualisation, network analysis, crowdsourcing, computer vision, IIIF. Audience = external.
+
+## Ongoing activity
+
+•	INTERNAL COLLABORATION. Work internally to gather requirements, sample content to create proof of concept models, advocate to integrate digital humanities training into research methods offer. How can the library help? 
+
+•	EXTERNAL COLLABORATION. Explore potential platforms to disseminate training materials, such as Programming Historian, Carpentries Incubator, GitHub Skills. Disseminate via blog posts, publications, conference papers 
+
+•	DOCUMENTATION. An ongoing process of recording activity and personal growth, reflecting on progress: what have I learned, what have I done, what is going well, where are the areas of concern, what do I need to do next, what are my questions, what don’t I know, where do I need to look for help or information? Use this to generate an end-of-project report to summarise activity, progress, challenges, and identify next steps.
