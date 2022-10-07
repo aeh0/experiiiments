@@ -1,8 +1,15 @@
+---
+layout: post
+title: "Getting back on track"
+author: "Alison Harvey"
+date: 2022-10-07
+---
 Two months into the project, I’m reviewing what I’d originally set out to do, and reflecting on progress so far. 
 
 The main research focus for my project is Alma Digital – digital repository software I was responsible for implementing at Cardiff University. I had planned to use the project to investigate its potential to support academic needs. Can it support the creation of sustainable digital archives? Can it integrate with external tools to feed online exhibitions? 
 
 Alma Digital uses IIIF (the International Image Interoperability Framework) to serve its images, but the software provider (Ex Libris) had made little of the advantages of this during our implementation phase. I also had yet to come across any fellow customers, anywhere in the world, that were making use of the functionality beyond their own installations. As an active member of the IIIF community for some years, I was keen to communicate the benefits and potential of IIIF to the Alma Digital community. 
+<!--more--> 
 
 Just prior to the commencement of the fellowship, I gave a presentation at WHELF 2022, to an audience of information professionals based in Welsh universities and research organisations. As a consortium, all WHELF members utilise Alma as their Library Management System, with the option - as we chose to pursue at Cardiff University - to adopt the Alma Digital module as an added extra.
 
@@ -19,6 +26,7 @@ I could have responded to this by moving onto a different section of the project
 -	successfully trialling and testing alternative methods to pull content out of Alma Digital in the short-term
 -	using these methods to rebuild existing digital projects
 -	lobbying for the need for a long-term fix to the issue, using the platform of the Ex Libris conference to raise awareness among Ex Libris staff and customers of the range of features that could be restored.
+
 
 The main barrier I’ve encountered is that Alma Digital appears to be working perfectly – within our own implementation. It’s only when trying to share content from our system with external tools using IIIF (the focus of my project) that errors become apparent. Raising awareness of IIIF and its potential was key to persuading Ex Libris that the issue was sufficiently impactful to develop a fix as a priority.
 
