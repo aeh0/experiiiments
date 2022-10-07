@@ -22,16 +22,16 @@ By starting small, but thinking big, individuals and organisations can inspire s
 
 ## Project workstreams
 
-1	ALMA DIGITAL. Interrogate the capacity of Alma Digital to support the construction of digital archives and online exhibitions. What can it do? What can’t it do? What tools will it integrate with? Develop training material for library staff and researchers. Identify limitations and pursue fixes with Ex Libris. Audience = internal, and potential adopters of Alma Digital (e.g., WHELF). 
+**1	ALMA DIGITAL**. Interrogate the capacity of Alma Digital to support the construction of digital archives and online exhibitions. What can it do? What can’t it do? What tools will it integrate with? Develop training material for library staff and researchers. Identify limitations and pursue fixes with Ex Libris. Audience = internal, and potential adopters of Alma Digital (e.g., WHELF). 
 
-2	ONLINE EXHIBITIONS. Research and evaluate free platforms for online exhibitions, suitable for those without access to Alma Digital. Both ‘flat’ images and IIIF compatible, review of pros and cons. Audience = external.
+**2	ONLINE EXHIBITIONS**. Research and evaluate free platforms for online exhibitions, suitable for those without access to Alma Digital. Both ‘flat’ images and IIIF compatible, review of pros and cons. Audience = external.
 
-3	DIGITAL HUMANITIES TOOLKIT. Research and develop an introductory toolkit for digital humanities activity, to include data mining, text analysis, data visualisation, network analysis, crowdsourcing, computer vision, IIIF. Audience = external.
+**3	DIGITAL HUMANITIES TOOLKIT**. Research and develop an introductory toolkit for digital humanities activity, to include data mining, text analysis, data visualisation, network analysis, crowdsourcing, computer vision, IIIF. Audience = external.
 
 ## Ongoing activity
 
-•	INTERNAL COLLABORATION. Work internally to gather requirements, sample content to create proof of concept models, advocate to integrate digital humanities training into research methods offer. How can the library help? 
+**•	INTERNAL COLLABORATION**. Work internally to gather requirements, sample content to create proof of concept models, advocate to integrate digital humanities training into research methods offer. How can the library help? 
 
-•	EXTERNAL COLLABORATION. Explore potential platforms to disseminate training materials, such as Programming Historian, Carpentries Incubator, GitHub Skills. Disseminate via blog posts, publications, conference papers 
+**•	EXTERNAL COLLABORATION**. Explore potential platforms to disseminate training materials, such as Programming Historian, Carpentries Incubator, GitHub Skills. Disseminate via blog posts, publications, conference papers 
 
-•	DOCUMENTATION. An ongoing process of recording activity and personal growth, reflecting on progress: what have I learned, what have I done, what is going well, where are the areas of concern, what do I need to do next, what are my questions, what don’t I know, where do I need to look for help or information? Use this to generate an end-of-project report to summarise activity, progress, challenges, and identify next steps.
+**•	DOCUMENTATION**. An ongoing process of recording activity and personal growth, reflecting on progress: what have I learned, what have I done, what is going well, where are the areas of concern, what do I need to do next, what are my questions, what don’t I know, where do I need to look for help or information? Use this to generate an end-of-project report to summarise activity, progress, challenges, and identify next steps.
