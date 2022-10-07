@@ -28,7 +28,7 @@ I could have responded to this by moving onto a different section of the project
 
 The main barrier I’ve encountered is that Alma Digital appears to be working perfectly – within our own implementation. It’s only when trying to share content from our system with external tools using IIIF (the focus of my project) that errors become apparent. Raising awareness of IIIF and its potential was key to persuading Ex Libris that the issue was sufficiently impactful to develop a fix as a priority.
 
-Since the presentation, I’ve been able to schedule a meeting with Alma Digital’s product owner, who has acknowledged and been supportive of the need for an imminent fix, and am due to meet with their developers later this month to take a look at the issue.
+Since the [presentation at IGeLU](https://vimeo.com/756243360), I’ve been able to schedule a meeting with Alma Digital’s product owner, who has acknowledged and been supportive of the need for an imminent fix, and am due to meet with their developers later this month to take a look at the issue.
 
 While part of me feels that I haven’t produced as much in the way of tangible digital outputs as I’d hoped, I think my tenacity in pursuing a solution has paid off, not just for our benefit but for all Alma Digital customers, and I hope to be able to resume work on some pilot digital resources once a fix is implemented. I then intend to write up findings as part of the final project report.
 
