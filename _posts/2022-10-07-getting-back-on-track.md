@@ -22,7 +22,7 @@ I could have responded to this by moving onto a different section of the project
 -	trialling and testing behaviours to clarify the exact nature of the fault, and reporting it to Ex Libris via official channels
 -	communicating the issue via worked examples on my GitHub blog to IIIF and Universal Viewer communities, seeking advice, and feeding back to Ex Libris
 -	[successfully trialling and testing alternative methods](https://aeh0.github.io/experiiiments/2022/09/13/universal-viewer-2.html) to pull content out of Alma Digital in the short-term
--	using these methods to rebuild existing digital projects
+-	using these methods to rebuild [existing digital projects](https://xerte.cardiff.ac.uk/play_17356)
 -	lobbying for the need for a long-term fix to the issue, using the platform of the Ex Libris conference to raise awareness among Ex Libris staff and customers of the range of features that could be restored.
 
 
@@ -34,4 +34,4 @@ While part of me feels that I haven’t produced as much in the way of tangible 
 
 Still being uncertain of the timescale for a fix, I plan to turn my attention in the meantime to one of the other fellowship aims, which is to research and develop some introductory digital humanities training. I’ve been asked to contribute sessions on digital history and archives suitable for postgraduate students in our School of History, Religion and Archaeology later this month, so this seems like a good place to start.
 
-I intend to discuss the realities of digitisation in the context of our activity at Cardiff – the realities and logistics – with the aim of conveying the huge resource implications. I hope this awareness will help students realise that digital archives represent a tiny proportion of the sources that are available to them, appreciate the decision-making processes that go into identifying what is digitised and how, and the implications these decisions have for them, as users of the archives. 
+I intend to discuss digitisation in the context of our activity at Cardiff – the realities and logistics – with the aim of conveying the huge resource implications. I hope this awareness will help students realise that digital archives represent a tiny proportion of the sources that are available to them, appreciate the decision-making processes that go into identifying what is digitised and how, and the implications these decisions have for them, as users of the archives. 
