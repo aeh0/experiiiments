@@ -5,9 +5,8 @@ author: "Alison Harvey"
 date: 2022-10-07
 ---
 Two months into the project, I’m reviewing what I’d originally set out to do, and reflecting on progress so far. The main research focus for my project is [Alma Digital](https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1) – digital repository software I was responsible for implementing at Cardiff University. I had planned to use the project to investigate its potential to support academic needs. Can it support the creation of sustainable digital archives? Can it integrate with external tools to feed online exhibitions? 
-
-Alma Digital uses [IIIF](https://iiif.io/) to serve its images, but the software provider (Ex Libris) had made little of the advantages of this during our implementation phase. I also had yet to come across any fellow customers, anywhere in the world, that were making use of the functionality beyond their own installations. As an active member of the IIIF community for some years, I was keen to communicate the benefits and potential of IIIF to the Alma Digital community. 
 <!--more--> 
+Alma Digital uses [IIIF](https://iiif.io/) to serve its images, but the software provider (Ex Libris) had made little of the advantages of this during our implementation phase. I also had yet to come across any fellow customers, anywhere in the world, that were making use of the functionality beyond their own installations. As an active member of the IIIF community for some years, I was keen to communicate the benefits and potential of IIIF to the Alma Digital community. 
 
 Just prior to the commencement of the fellowship, I gave a presentation at the [Welsh Higher Education Libraries Forum 2022](https://www.youtube.com/watch?v=ywI3tkFO-ts), to an audience of information professionals based in Welsh universities and research organisations. As a consortium customer, all WHELF members use Alma as their Library Management System, with the option - as we chose to pursue at Cardiff University - to adopt the Alma Digital module as an added extra.
 
