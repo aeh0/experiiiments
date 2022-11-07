@@ -28,10 +28,17 @@ What are the main activities that you have undertaken as part of your fellowship
 
 NEW LIBRARY SERVICE AND TRAINING TO SUPPORT RESEARCHERS IN PUBLISHING DIGITAL OUTPUTS VIA ALMA DIGITAL
 
-- Testing and trialling to establish the nature of issues with our digital platform, and developing workarounds
-- Extensive liaison and network building with relevant technical communities - IIIF (quantify UK uptake in attendance/engagement - numbers and percentage/proportion), Universal Viewer, and Ex Libris. Expand
-- Wrote and delivered a paper at WHELF 2022 and the International Group of Ex Libris Users conference (expand on successful outcomes)
+- Testing to define and diagnose IIIF functionality issues with Alma Digital following an update by the supplier (Ex Libris). 
+
+- Developing short-term workarounds to allow the delivery of time-sensitive projects affected by this failure of functionality.
+
+- Extensive liaison and network building with relevant technical communities to obtain guidance and support with these issues. I have reached out to Ex Libris developers, as well as Alma Digital, IIIF, and Universal Viewer user communities via Twitter and Slack.
+
+- Writing and delivering a paper at the WHELF 2022 conference (Welsh Higher Education Libraries Forum), attended by library staff from Welsh HEIs. Ex Libris supplies Alma, a Library Management System, to all HEIs in Wales as part of a consortium contract, but Cardiff University is the first among them to adopt Alma Digital as an image repository. Due to its ease of integration with the Alma LMS, conference attendees were keen to hear about our experiences with Alma Digital. The paper aimed to raise awareness of the IIIF functionality offered by Alma Digital, and the ways in which it allows content to be interoperably distributed to a wide range of teaching and research outputs. 
+
+- Writing and delivering a subsequent paper at an international conference - IGeLU (International Group of Ex Libris Users). Since writing the paper for WHELF, the IIIF functionality it promoted had been lost following an update by Ex Libris.  These successfully raised awareness of the added value of IIIF to Alma Digital, and the signification of its current failure in functionality for users. This has expedited a response from the Alma Digital project owner and his development team - the issue has now been allocated the highest priority level, though at the time of writing, remains unresolved.
 - Developed ingest workflows to support the load of content for Crowd Cymru and a student internship (School of Architecture), establishing limits of Alma Digital
+- IIIF network (quantify UK uptake in attendance/engagement - numbers and percentage/proportion)
 
 TRAINING IN DIGITAL EXHIBITION TOOLS AND DH TOOLS
 
