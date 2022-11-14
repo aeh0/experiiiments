@@ -243,7 +243,7 @@ Further configuration can be applied through the use of [theme layouts](https://
 
 # Make your site live via GitHub Pages
 
-* So far, you've been working on files stored locally. You need to send copies of these to GitHub. Open GitHub Desktop, and click on New > Create a repository. Enter the name of your repository, and you will be be prompted to 'add this repository'. Click this, and confirm. Enter 'new site' in the summary box, and commit to main. Finally, push commit to the origin remote. In a few minutes, your online files will match your loacl files. In GitHub, go to your repository's 'Action' tab to see the workflow run live.
+* So far, you've been working on files stored locally. You need to send copies of these to GitHub. Open GitHub Desktop, and click on New > Create a repository. Enter the name of your repository, and you will be be prompted to 'add this repository'. Click this, and confirm. Enter 'new site' in the summary box, and commit to main. Finally, push commit to the origin remote. In a few minutes, your online files will match your local files. In GitHub, go to your repository's 'Action' tab to see the workflow run live.
 * When completed, go to the Settings tab > Pages.
 * Under Source, select 'deploy from a branch' and set 'branch' to 'main/(root)', then click 'save'.
 * Wait a few minutes for site to build. When you refresh the page, it should now say, 'Your site is published at https://[YOUR_USERNAME].github.io/[YOUR_REPOSITORY_NAME]'. Congratulations - your site is live!
