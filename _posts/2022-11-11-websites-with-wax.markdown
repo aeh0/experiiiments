@@ -128,13 +128,13 @@ docker run -it --rm -v ${PWD}:/wax --name wax -p 4000:4000 minicomp/wax bash
 collections:
   exhibits:
     output: true
-  **qatar**:
+ qatar:
     output: true
-    layout: **'qatar_item'**
+    layout: 'qatar_item'
     metadata:
-      source: **'qatar.csv'** # path to the metadata file within `_data`
+      source: 'qatar.csv' # path to the metadata file within `_data`
     images:
-      source: 'raw_images/**qatar**' # path to the directory of images within `_data`
+      source: 'raw_images/qatar' # path to the directory of images within `_data`
 ~~~
 
 * Mine looks like this: 
@@ -143,13 +143,13 @@ collections:
 collections:
   exhibits:
     output: true
-  **edward**:
+  edward:
     output: true
-    layout: **'edward_item'**
+    layout: 'edward_item'
     metadata:
-      source: **'metadata.csv'** # path to the metadata file within `_data`
+      source: 'metadata.csv' # path to the metadata file within `_data`
     images:
-      source: 'raw_images/**edward**' # path to the directory of images within `_data`
+      source: 'raw_images/edward' # path to the directory of images within `_data`
 ~~~
 
 * In **SEARCH INDEX SETTINGS**, update the word **qatar**, and the list of fields to reflect the ones you've used. Only include fields you want to make searchable. Mine looks like: 
@@ -159,14 +159,14 @@ search:
   main:
     index: '/search/index.json' # file the index will get written to
     collections:
-      **edward**:
+      edward:
         content: false # whether or not to index page content
         fields: # the metadata fields to index
-          - **label**
-          - **author**
-          - **description**
-          - **_date**
-          - **object_type**
+          - label
+          - author
+          - description
+          - _date
+          - object_type
 ~~~
 
 * Further down, you can configure the **MENU** and **FOOTER** for your site, but this can be done at any stage.
@@ -175,16 +175,16 @@ search:
 
 ~~~
 meta:
-  - label: '**Title**'
-    value: page.**label**
-  - label: '**Author**'
-    value: page.**author**
-  - label: '**Description**'
-    value: page.**description**
-  - label: '**Date**'
-    value: page.**_date**
-  - label: '**Type**'
-    value: page.**object_type**
+  - label: 'Title'
+    value: page.label
+  - label: 'Author'
+    value: page.author
+  - label: 'Description'
+    value: page.description
+  - label: 'Date'
+    value: page._date
+  - label: 'Type'
+    value: page.object_type
   
 ~~~
 
@@ -213,7 +213,7 @@ bundle exec rake wax:pages [YOUR_COLLECTION_NAME]
 
 This will:
 1. Look for the metadata file you specified in your **_config.yml** file under collections > [YOUR_COLLECTION_NAME] > metadata > source.
-2. Generate a directory named after your collection prepended with an underscore (e.g., **_qatar** or **_[YOUR_COLLECTION_NAME]**).
+2. Generate a directory named after your collection prepended with an underscore (e.g., _[YOUR_COLLECTION_NAME]).
 3. Generate pages into that directory for each record, named after its pid value.
 
 # Running the tasks - create the search index
