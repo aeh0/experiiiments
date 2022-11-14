@@ -122,13 +122,13 @@ docker run -it --rm -v ${PWD}:/wax --name wax -p 4000:4000 minicomp/wax bash
 # [Updating your configuration](https://minicomp.github.io/wiki/wax/setting-up-your-site/updating-your-configuration/)
 
 * At the top level of the repository, open the **_config.yml** file in your text editor. Update the title, description, copyright, url (e.g 'https://[YOUR_GITHUB_USERNAME].github.io') and baseurl (e.g. '/[YOUR_REPOSITORY_NAME]') with your own details.
-* Further down the code, in **COLLECTION SETTINGS**, change the word **qatar** to the name of your image folder (e.g. **edward**), and update the metadata source to the name of your csv file.
+* Further down the code, in **COLLECTION SETTINGS**, update all instances of **qatar** to the name of your image folder (e.g. **edward**). Check the collection name, layout, and raw_images path. Update metadata source to the name of your csv file. The template data looks like:
 
 ~~~
 collections:
   exhibits:
     output: true
- qatar:
+  qatar:
     output: true
     layout: 'qatar_item'
     metadata:
@@ -137,7 +137,7 @@ collections:
       source: 'raw_images/qatar' # path to the directory of images within `_data`
 ~~~
 
-* Mine looks like this: 
+* I changed mine to looks like this: 
 
 ~~~
 collections:
@@ -185,7 +185,6 @@ meta:
     value: page._date
   - label: 'Type'
     value: page.object_type
-  
 ~~~
 
 * Work through the contents of **_pages**, removing any references to **qatar**, and configuring as required.
