@@ -21,7 +21,7 @@ TRAINING IN DIGITAL EXHIBITION TOOLS AND DH TOOLS
 - Completing self-guided training in GitHub and Jekyll to set up a [static website to use as a blog](https://aeh0.github.io/experiiiments/2022/08/04/blog-like-a-hacker.html). As well as using this to document progress, it has formed part of my research – a proof of concept model for delivering free, secure hosting without adverts or branding.
 - Developing a proof of concept [Xerte-hosted website](https://xerte.cardiff.ac.uk/play_17356#page1) to support a student internship in the School of Welsh, testing its functionality and limitations.
 - Requirements gathering, design and delivery of a lecture on Digitisation and Digital Archives for all postgraduate students in the School of History, Archaeology and Religion, which has been authorised as a mandatory research methods session for future years.
-- Completing self-guided training in Wax to set up a [small demo online exhibition and digital archive](https://aeh0.github.io/wax-demo/). Supported by Jekyll, this is another means of providing free scholarly hosting without adverts or branding, as well as delivering IIIF images without centralised infrastructure. I have been documenting my methods and learning process on the blog, and it will form the basis of a tutorial for others to follow.
+- Completing self-guided training in Wax to set up a [small demo online exhibition and digital archive](https://aeh0.github.io/wax-demo/). Supported by Jekyll, this is another means of providing free scholarly hosting without adverts or branding, as well as delivering IIIF images without centralised infrastructure. I have been [documenting my methods and learning process via the blog](https://aeh0.github.io/experiiiments/2022/11/11/websites-with-wax.html), and this will form the basis of a tutorial for others to follow.
 - Continuing self-guided training in responsive web design via [Free Code Camp](https://www.freecodecamp.org/learn/2022/responsive-web-design/).
 
 **What work do you intend to undertake in the near future during your fellowship?**
@@ -45,7 +45,7 @@ TRAINING IN DIGITAL EXHIBITION TOOLS AND DH TOOLS
 **What plans do you have to share your findings within your institution/within the sector?**
 
 - Ongoing blogging and documentation to feed into a final report
-- Respond to any relevant 2023 or 2024 call for papers at major conferences
+- Respond to any relevant 2023 or 2024 calls for papers at major conferences
 - Explore publication routes for digital humanities training materials ([Carpentries Incubator and Carpentries Lab](https://carpentries.org/community-lessons/), [Programming Historian](https://programminghistorian.org/en/))
 
 **Is there anything else that you would like to tell us or feedback regarding your fellowship to date?**
