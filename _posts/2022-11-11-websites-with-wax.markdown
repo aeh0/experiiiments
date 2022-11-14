@@ -20,13 +20,13 @@ The results look very professional, and I've learned a lot of fundamental comput
 
 * Wax can work with CSV, JSON, and YAML metadata files, though CSV is recommended. Create your CSV in Google Sheets rather than Excel, which can cause encoding errors. 
 * Every row in the spreadsheet will represent a digital object. 
-* The only mandatory columns are ==pid== and ==label==. 
-* ==Pid== is the persistent identifier for each digital object. It must be unique. Use lowercase, don't include spaces, and keep the identifiers simple, e.g. poem001.
-* ==Label== is the title for each digital object. This should be a succinct description, which will be displayed on your site, e.g. 'The Ash Grove, 1916'.
+* The only mandatory columns are **pid** and **label**. 
+* **Pid** is the persistent identifier for each digital object. It must be unique. Use lowercase, don't include spaces, and keep the identifiers simple, e.g. poem001.
+* **Label** is the title for each digital object. This should be a succinct description, which will be displayed on your site, e.g. 'The Ash Grove, 1916'.
 * You can add as many other descriptive metadata fields/spreadsheet columns as you like. Keep the field names in lowercase, avoid special characters, except underscores, which should be used rather than spaces. Fields only need to make sense to you - you can change how they will display on your site later.
-* Some field names will cause confusion with the underlying software of Jekyll and Wax. Avoid ==id== (use ==pid== instead), ==date== (use ==_date== instead), and ==tags== for filtering (use ==object_type== instead).
-* I used ==pid==, ==label==, ==author==, ==description==, and ==_date== to describe each object, and ==object_type== to add a tag/category, allowing the objects to be filtered (see table below).
-* Export the metadata file in csv format, saving locally it with a simple name, e.g. ==metadata.csv==
+* Some field names will cause confusion with the underlying software of Jekyll and Wax. Avoid **id** (use **pid** instead), **date** (use **_date** instead), and **tags** for filtering (use **object_type** instead).
+* I used **pid**, **label**, **author**, **description**, and **_date** to describe each object, and **object_type** to add a tag/category, allowing the objects to be filtered (see table below).
+* Export the metadata file in csv format, saving locally it with a simple name, e.g. **metadata.csv**
 
 | pid  | label                            | author        | description                 | _date       | object_type |
 | ---- | -------------------------------- | ------------- | --------------------------- | ----------- | ----------- |
@@ -41,146 +41,195 @@ The results look very professional, and I've learned a lot of fundamental comput
 
  * Wax accepts .tiff, .jpeg, .png, and .pdf files and assumes relatively high resolution. For best results, resolution should be as standard as possible across the collection.
  * For Wax to work, each source image file must be named to match its pid in the metadata exactly. 
- * A single image objects, such as ==obj1==, must be named ==obj1.jpg==. 
- * A multi-page object, such as ==obj3==, must be stored in a folder called ==obj3==, and contain images with a running filenumber, according to the order you want the images to appear, e.g. page 1 = ==001.jpg==, page2 = ==002.jpg==, etc.
- * Store all your images and any related folders in one single folder locally. Name it simply - mine was ==edward==.
+ * A single image objects, such as **obj1**, must be named **obj1.jpg**. 
+ * A multi-page object, such as **obj3**, must be stored in a folder called **obj3**, and contain images with a running filenumber, according to the order you want the images to appear, e.g. page 1 = **001.jpg**, page2 = **002.jpg**, etc.
+ * Store all your images and any related folders in one single folder locally. Name it simply - mine was **edward**.
 
 # Setting up your system
 
-* Install a text editor if you don't have one. Atom or Visual Studio Code are good options.
+* Install a text editor if you don't have one. [Atom](https://atom.io/) or [Visual Studio Code](https://code.visualstudio.com/) are good options.
 * Install [Docker and Git](https://minicomp.github.io/wiki/wax/setting-up-your-system/with-docker/). I originally attempted to [install the five individual software components manually](https://minicomp.github.io/wiki/wax/setting-up-your-system/install-manually/), but some of the instructions in the documentation are out of date. Installing Docker, where all of the required software is pre-bundled into one container, worked without any issues. 
 * Open your command prompt and check that Docker and Git are correctly installed:
+
 ~~~
-    docker -v
-    git -version
+docker -v
+git -version
 ~~~
+
 # [Creating your own Wax repository](https://minicomp.github.io/wiki/wax/setting-up-your-site/copy-the-demo-template/)
 
-* Log into [GitHub](https://github.com) or register a new account 
-* Go to the [Wax repository](https://github.com/minicomp/wax) and click 'Use this Template' (green button).
-* This prompts you to create a copy of the repository, attached to your own account. You should name it after the collection or exhibition you’ll make, since this name will be displayed in your free URL for the project with GitHub. I called mine 'wax-demo'.
-* Go to your new Wax repository page, click the green 'Code' button, and copy the URL it provides to your clipboard. This should look like: https://github.com/[your github username]/[your repository name].git
+* Log into [GitHub](https://github.com), or register a new account 
+* Go to the [Wax repository](https://github.com/minicomp/wax) and click **Use this Template** (green button).
+* This prompts you to create a copy of the repository, attached to your own account. You should name it after the collection or exhibition you’ll make, since this name will be displayed in your free URL for the project with GitHub. I called mine **wax-demo**.
+* Go to your new Wax repository page, click the green **Code** button, and copy the URL it provides to your clipboard. This should look like: https://github.com/[YOUR_GITHUB_USERNAME]/[YOUR_REPOSITORY_NAME].git
 * Open command prompt, and change directory into where you’d like to work on your project, e.g.
-    cd Documents
+
+~~~
+cd Documents
+~~~
+
 * Run the git clone command plus the link you copied in one line, e.g.
-    git clone https://github.com/[your github username]/[your repository name].git
+
+~~~
+git clone https://github.com/[YOUR_GITHUB_USERNAME]/[YOUR_REPOSITORY_NAME].git
+~~~
+
 * When the clone is complete, change directory into your newly cloned project folder, which will be the same as your repository name, e.g.
-    cd wax-demo
+
+~~~
+cd wax-demo
+~~~
 
 # [Building the site](https://minicomp.github.io/wiki/wax/using-docker/)
 
-* Open Docker Desktop. I couldn't work out where to go to build the image, but right-clicking on the Docker Desktop icon in the system tray, and launching Quick Start Guide worked for me. Click start, and use the new terminal on the right to enter the following commands.
+* Open Docker Desktop. I couldn't work out where to go to build the image, but right-clicking on the Docker Desktop icon in the system tray, and launching **Quick Start Guide** worked for me. Click Start, and use the new terminal on the right to build the site.
 * Build the minicomp/wax base Docker image (don't forget the "." at the end!):
-    docker build -t minicomp/wax .
+
+~~~
+docker build -t minicomp/wax .
+~~~
+
 * Create and access an interactive bash container from the image by running:
-    docker run -it --rm -v ${PWD}:/wax --name wax -p 4000:4000 minicomp/wax bash
+
+~~~
+docker run -it --rm -v ${PWD}:/wax --name wax -p 4000:4000 minicomp/wax bash
+~~~
+
 * Inside the container, update the dependencies by running:
-    bundle update
+
+~~~
+bundle update
+~~~
+
 * Check that you have the wax_tasks available by running:
-    bundle exec rake --tasks
-* You only need to complete this stage oenece. You can exit any time by typing the command 'exit', which will destroy the container but not the base image. Whenever you need to run Wax tasks to process collection data or run Jekyll to serve your site, you do so from within this container. Create and access a new one when needed by running the command:
-    docker run -it --rm -v ${PWD}:/wax --name wax -p 4000:4000 minicomp/wax bash
+
+~~~
+bundle exec rake --tasks
+~~~
+
+* You only need to complete this stage once. You can exit any time by typing the command 'exit', which will destroy the container but not the base image. Whenever you need to run Wax tasks to process collection data or run Jekyll to serve your site, you do so from within this container. Create and access a new one when needed by running the command:
+
+~~~
+docker run -it --rm -v ${PWD}:/wax --name wax -p 4000:4000 minicomp/wax bash
+~~~
 
 # [Adding your collection data](https://minicomp.github.io/wiki/wax/setting-up-your-site/adding-your-collection-data/)
 
 * Open File Explorer, and navigate to your new Wax repository.
-* Start by deleting the template data. Delete the _qatar folder. Open the img folder and delete the derivatives folder inside. Open the _data folder and delete the csv files. Then open the raw_images folder and delete the contents.
-* Next, add your top-level image folder and all of its contents, e.g. 'edward' to the raw_images folder, then one level up, add your metadata file to the _data folder.
+* Start by deleting the template data. Delete the **_qatar** folder. Open the **img** folder and delete the **derivatives** folder inside. Open the **_data** folder and delete the csv files. Then open the **raw_images** folder and delete the contents.
+* Next, add your top-level image folder and all of its contents, e.g. **edward** to the **raw_images** folder, then one level up, add your **metadata.csv** file to the **_data** folder.
 
 # [Updating your configuration](https://minicomp.github.io/wiki/wax/setting-up-your-site/updating-your-configuration/)
 
-* At the top level, open the _config.yml file in your text editor. Update the title, description, copyright, url (e.g 'https://[your github username].github.io') and baseurl (e.g. '/[your repository name]') with your own details.
-* Further down the code, in COLLECTION SETTINGS, change the word qatar to the name of your image folder (e.g. edward), and update the metadata source to the name of your csv file.
+* At the top level of the repository, open the **_config.yml** file in your text editor. Update the title, description, copyright, url (e.g 'https://[YOUR_GITHUB_USERNAME].github.io') and baseurl (e.g. '/[YOUR_REPOSITORY_NAME]') with your own details.
+* Further down the code, in **COLLECTION SETTINGS**, change the word **qatar** to the name of your image folder (e.g. **edward**), and update the metadata source to the name of your csv file.
 
-    collections:
-      exhibits:
-        output: true
-      qatar:
-        output: true
-        layout: 'qatar_item'
-        metadata:
-          source: 'qatar.csv' # path to the metadata file within `_data`
-        images:
-          source: 'raw_images/qatar' # path to the directory of images within `_data`
+~~~
+collections:
+  exhibits:
+    output: true
+  **qatar**:
+    output: true
+    layout: **'qatar_item'**
+    metadata:
+      source: **'qatar.csv'** # path to the metadata file within `_data`
+    images:
+      source: 'raw_images/**qatar**' # path to the directory of images within `_data`
+~~~
 
 * Mine looks like this: 
 
+~~~
+collections:
+  exhibits:
+    output: true
+  **edward**:
+    output: true
+    layout: **'edward_item'**
+    metadata:
+      source: **'metadata.csv'** # path to the metadata file within `_data`
+    images:
+      source: 'raw_images/**edward**' # path to the directory of images within `_data`
+~~~
+
+* In **SEARCH INDEX SETTINGS**, update the word **qatar**, and the list of fields to reflect the ones you've used. Only include fields you want to make searchable. Mine looks like: 
+
+~~~
+search:
+  main:
+    index: '/search/index.json' # file the index will get written to
     collections:
-      exhibits:
-        output: true
-      edward:
-        output: true
-        layout: 'edward_item'
-        metadata:
-          source: 'metadata.csv' # path to the metadata file within `_data`
-        images:
-          source: 'raw_images/edward' # path to the directory of images within `_data`
+      **edward**:
+        content: false # whether or not to index page content
+        fields: # the metadata fields to index
+          - **label**
+          - **author**
+          - **description**
+          - **_date**
+          - **object_type**
+~~~
 
-* In SEARCH INDEX SETTINGS, update the word 'qatar', and the list of fields to reflect the ones you've used. Only include fields you want to make searchable. Mine looks like: 
+* Further down, you can configure the **MENU** and **FOOTER** for your site, but this can be done at any stage.
 
-    search:
-      main:
-        index: '/search/index.json' # file the index will get written to
-        collections:
-          edward:
-            content: false # whether or not to index page content
-            fields: # the metadata fields to index
-              - author
-              - label
-              - _date
-              - object_type
-              - description
+* The layout **edward_item**, referred to in the **COLLECTIONS** code, didn't exist, so I needed to create it. Go to **_layouts**, and open the **qatar_item** layout in a text editor. Rename it to **[YOUR_IMAGE_FOLDER NAME]_item**, and update the content related to labels and values. The values are the names of the field names you've chosen, and the labels the text that you want to display on your site. Mine looks like:
 
-* Further down, you can configure the MENU and FOOTER for your site, but this can be done at any stage.
+~~~
+meta:
+  - label: '**Title**'
+    value: page.**label**
+  - label: '**Author**'
+    value: page.**author**
+  - label: '**Description**'
+    value: page.**description**
+  - label: '**Date**'
+    value: page.**_date**
+  - label: '**Type**'
+    value: page.**object_type**
+  
+~~~
 
-* The layout 'edward_item', referred to in COLLECTIONS, doesn't exist, so I needed to create it. Go to _layouts, and open the qatar_item layout in a text editor. Rename it to '[your image folder name]_item', and update the content related to labels and values. The values are the names of the field names you've chose, and the labels the text that you want to display on your site. Mine looks like:
-
-    meta:
-      - label: 'Title'
-        value: page.label
-      - label: 'Author'
-        value: page.author
-      - label: 'Type'
-        value: page.object_type
-      - label: 'Description'
-        value: page.description
-      - label: 'Date'
-        value: page._date
-
-* Work through the contents of _pages, removing references to 'qatar', and configuring as required.
+* Work through the contents of **_pages**, removing any references to **qatar**, and configuring as required.
 
 # Running the tasks - create IIIF images
 
 In Docker, run:
 
-    bundle exec rake wax:derivatives:iiif [your collection name]
+~~~
+bundle exec rake wax:derivatives:iiif [YOUR_COLLECTION_NAME]
+~~~
 
 When you run the line above for your collection, the task will:
-1. Look for the directory of source images you specified in your _config.yml file under collections > [your collection name] > images > source 
-2. Generate many IIIF derivatives, image tiles, and JSON representations of the collection items into the directory img/derivatives/iiif.
-3. Automatically add three fields (full, thumbnail, and manifest) to each of your metadata records with the relative paths to the full and thumbnail size image derivatives and the IIIF manifest.
+1. Look for the directory of source images you specified in your **_config.yml** file under collections > [YOUR COLLECTION_NAME] > images > source.
+3. Generate many IIIF derivatives, image tiles, and JSON representations of the collection items into the directory **img/derivatives/iiif**.
+4. Automatically add three fields (full, thumbnail, and manifest) to each of your metadata records with the relative paths to the full and thumbnail size image derivatives and the IIIF manifest.
 
 # Running the tasks - create collection pages
 
 In Docker, run:
 
-    bundle exec rake wax:pages [your collection name]
-    
+~~~
+bundle exec rake wax:pages [YOUR_COLLECTION_NAME]
+~~~
+
 This will:
-1. Look for the metadata file you specified in your _config.yml file under collections > [your collection name] > metadata > source
-2. Generate a directory named after your collection prepended with an underscore (e.g., _qatar or _yourcollectionname)
-3. Generate pages into that directory for each record named after its pid value
+1. Look for the metadata file you specified in your **_config.yml** file under collections > [YOUR_COLLECTION_NAME] > metadata > source.
+2. Generate a directory named after your collection prepended with an underscore (e.g., **_qatar** or **_[YOUR_COLLECTION_NAME]**).
+3. Generate pages into that directory for each record, named after its pid value.
 
 # Running the tasks - create the search index
 
 In Docker, run:
 
-    bundle exec rake wax:search [your search name - this is the word under 'search' in the SEARCH section of your config.yaml file, e.g. main]
+~~~
+bundle exec rake wax:search [YOUR_SEARCH_NAME]
+~~~
+
+Your **search name** is the word found under 'search' in the **SEARCH** section of your config.yaml file, e.g. **main**
 
 This will:
-1. Look for the search configuration you set up in your _config.yml file, and find the SEARCH_NAME, .e.g. main.
-2. For each collection you gave the search, it will look for the markdown pages and add the fields and/or content from each page to the index.
-3. It will write the index as a JSON file to the filename you gave (e.g. index).
+1. Look for the search configuration you set up in your **_config.yml** file.
+2. For each collection you gave the search, it will look for the markdown pages, and add the fields and/or content from each page to the index.
+3. It will write the index as a JSON file to the filename you gave (e.g. **/search/index.json**).
 
 # Configuration
 
@@ -190,5 +239,5 @@ Further configuration can be applied through the use of [theme layouts](https://
 
 * Go to your repository page on Github.
 * Go to Settings > Pages.
-* Under Source, select the 'main' branch and 'root' folder and click 'Save'.
-* Wait a few minutes for site to build. When you refresh the page, it should now say something like 'Your site is published at https://[your username].github.io/[your repository name'. Congratulations - your site is live!
+* Under Source, select the 'main' branch and 'root' folder and click 'save'.
+* Wait a few minutes for site to build. When you refresh the page, it should now say, 'Your site is published at https://[YOUR_USERNAME].github.io/[YOUR_REPOSITORY_NAME]'. Congratulations - your site is live!
