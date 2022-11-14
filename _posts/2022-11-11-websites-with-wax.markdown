@@ -59,7 +59,7 @@ git -version
 # [Creating your own Wax repository](https://minicomp.github.io/wiki/wax/setting-up-your-site/copy-the-demo-template/)
 
 * Log into [GitHub](https://github.com), or register a new account 
-* Go to the [Wax repository](https://github.com/minicomp/wax) and click **Use this Template** (green button).
+* Go to the [Wax repository](https://github.com/minicomp/wax) and click **Use this Template** (green button) > **Create a new repository**.
 * This prompts you to create a copy of the repository, attached to your own account. You should name it after the collection or exhibition you’ll make, since this name will be displayed in your free URL for the project with GitHub. I called mine **wax-demo**.
 * Go to your new Wax repository page, click the green **Code** button, and copy the URL it provides to your clipboard. This should look like: https://github.com/[YOUR_GITHUB_USERNAME]/[YOUR_REPOSITORY_NAME].git
 * Open command prompt, and change directory into where you’d like to work on your project, e.g.
@@ -74,22 +74,23 @@ cd Documents
 git clone https://github.com/[YOUR_GITHUB_USERNAME]/[YOUR_REPOSITORY_NAME].git
 ~~~
 
-* When the clone is complete, change directory into your newly cloned project folder, which will be the same as your repository name, e.g.
+# [Building the site](https://minicomp.github.io/wiki/wax/using-docker/)
+
+* Open Docker Desktop. I couldn't work out where to go to build the image, but right-clicking on the Docker Desktop icon in the system tray, and launching **Quick Start Guide** worked for me. Click Start, and use the new terminal on the right to build the site.
+
+* First, change directory into your newly cloned project folder, which will be the same as your repository name, e.g.
 
 ~~~
 cd wax-demo
 ~~~
 
-# [Building the site](https://minicomp.github.io/wiki/wax/using-docker/)
-
-* Open Docker Desktop. I couldn't work out where to go to build the image, but right-clicking on the Docker Desktop icon in the system tray, and launching **Quick Start Guide** worked for me. Click Start, and use the new terminal on the right to build the site.
-* Build the minicomp/wax base Docker image (don't forget the "." at the end!):
+* Build the minicomp/wax base Docker image (don't forget the "." at the end!) You only need to do this once.
 
 ~~~
 docker build -t minicomp/wax .
 ~~~
 
-* Create and access an interactive bash container from the image by running:
+* Every time you want to build a new Wax site, you can create and access an interactive bash container from the image by running:
 
 ~~~
 docker run -it --rm -v ${PWD}:/wax --name wax -p 4000:4000 minicomp/wax bash
@@ -107,11 +108,7 @@ bundle update
 bundle exec rake --tasks
 ~~~
 
-* You only need to complete this stage once. You can exit any time by typing the command 'exit', which will destroy the container but not the base image. Whenever you need to run Wax tasks to process collection data or run Jekyll to serve your site, you do so from within this container. Create and access a new one when needed by running the command:
-
-~~~
-docker run -it --rm -v ${PWD}:/wax --name wax -p 4000:4000 minicomp/wax bash
-~~~
+* This will display a summary list of all the things Wax can do. Leave the terminal open while you add your collection data to the repository.
 
 # [Adding your collection data](https://minicomp.github.io/wiki/wax/setting-up-your-site/adding-your-collection-data/)
 
@@ -187,11 +184,13 @@ meta:
     value: page.object_type
 ~~~
 
-* Work through the contents of **_pages**, removing any references to **qatar**, and configuring as required.
+* If you want to add links to your metadata, add **type: link** underneath the value.
+
+* Check the **index.md** file, and the contents of **_pages**, removing any references to **qatar**, and configuring as required.
 
 # Running the tasks - create IIIF images
 
-In Docker, run:
+Go back to Docker, and run:
 
 ~~~
 bundle exec rake wax:derivatives:iiif [YOUR_COLLECTION_NAME]
@@ -230,6 +229,14 @@ This will:
 2. For each collection you gave the search, it will look for the markdown pages, and add the fields and/or content from each page to the index.
 3. It will write the index as a JSON file to the filename you gave (e.g. **/search/index.json**).
 
+* You're finished with Docker. You can exit by typing the command 'exit', which will destroy the container but not the base image. You can create and accessing a new container whenever you want to create a new Wax site by running the command below, updating the dependencies, and checking the tasks are available:
+
+~~~
+docker run -it --rm -v ${PWD}:/wax --name wax -p 4000:4000 minicomp/wax bash
+bundle update
+bundle exec rake --tasks
+~~~
+
 # Configuration
 
 Further configuration can be applied through the use of [theme layouts](https://minicomp.github.io/wiki/wax/using-theme-layouts/) and [components](https://minicomp.github.io/wiki/wax/using-theme-components/).
@@ -238,5 +245,5 @@ Further configuration can be applied through the use of [theme layouts](https://
 
 * Go to your repository page on Github.
 * Go to Settings > Pages.
-* Under Source, select the 'main' branch and 'root' folder and click 'save'.
+* Under Source, select 'deploy from a branch' and set 'branch' to 'main/(root)', then click 'save'.
 * Wait a few minutes for site to build. When you refresh the page, it should now say, 'Your site is published at https://[YOUR_USERNAME].github.io/[YOUR_REPOSITORY_NAME]'. Congratulations - your site is live!
