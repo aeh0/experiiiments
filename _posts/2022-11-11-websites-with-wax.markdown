@@ -137,7 +137,7 @@ collections:
       source: 'raw_images/qatar' # path to the directory of images within `_data`
 ~~~
 
-* I changed mine to looks like this: 
+* I changed mine to look like this: 
 
 ~~~
 collections:
