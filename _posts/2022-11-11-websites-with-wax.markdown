@@ -47,7 +47,7 @@ The results look very professional, and I've learned a lot of fundamental comput
 
 # Setting up your system
 
-* Install a text editor if you don't have one. [Atom](https://atom.io/) or [Visual Studio Code](https://code.visualstudio.com/) are good options.
+* Install a text editor if you don't have one. [Atom](https://atom.io/) or [Visual Studio Code](https://code.visualstudio.com/) are good options. You will also need [GitHub Desktop](https://desktop.github.com/).
 * Install [Docker and Git](https://minicomp.github.io/wiki/wax/setting-up-your-system/with-docker/). I originally attempted to [install the five individual software components manually](https://minicomp.github.io/wiki/wax/setting-up-your-system/install-manually/), but some of the instructions in the documentation are out of date. Installing Docker, where all of the required software is pre-bundled into one container, worked without any issues. 
 * Open your command prompt and check that Docker and Git are correctly installed:
 
@@ -243,7 +243,7 @@ Further configuration can be applied through the use of [theme layouts](https://
 
 # Make your site live via GitHub Pages
 
-* Go to your repository page on Github.
-* Go to Settings > Pages.
+* So far, you've been working on files stored locally. You need to send copies of these to GitHub. Open GitHub Desktop, and click on New > Create a repository. Enter the name of your repository, and you will be be prompted to 'add this repository'. Click this, and confirm. Enter 'new site' in the summary box, and commit to main. Finally, push commit to the origin remote. In a few minutes, your online files will match your loacl files. In GitHub, go to your repository's 'Action' tab to see the workflow run live.
+* When completed, go to the Settings tab > Pages.
 * Under Source, select 'deploy from a branch' and set 'branch' to 'main/(root)', then click 'save'.
 * Wait a few minutes for site to build. When you refresh the page, it should now say, 'Your site is published at https://[YOUR_USERNAME].github.io/[YOUR_REPOSITORY_NAME]'. Congratulations - your site is live!
