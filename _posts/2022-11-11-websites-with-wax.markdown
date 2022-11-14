@@ -50,6 +50,7 @@ The results look very professional, and I've learned a lot of fundamental skills
 * Install a text editor if you don't have one. Atom or Visual Studio Code are good options.
 * Install [Docker and Git](https://minicomp.github.io/wiki/wax/setting-up-your-system/with-docker/). I originally attempted to [install the five individual software components manually](https://minicomp.github.io/wiki/wax/setting-up-your-system/install-manually/), but some of the instructions in the documentation are out of date. Installing Docker, where all of the required software is pre-bundled into one container, worked without any issues. 
 * Open command prompt and check that Docker and Git are correctly installed
+
     docker -v
     git -version
 
