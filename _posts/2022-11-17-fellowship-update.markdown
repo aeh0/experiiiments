@@ -10,7 +10,7 @@ Below are the responses submitted for my progress update to RLUK and AHRC, ahead
 
 **What are the main activities that you have undertaken as part of your fellowship to date? These might include literature reviews, research trips, or interviews.**
 
-NEW LIBRARY SERVICE AND TRAINING TO SUPPORT RESEARCHERS IN PUBLISHING DIGITAL OUTPUTS VIA ALMA DIGITAL
+WORKSTREAM 1: NEW LIBRARY SERVICE AND TRAINING TO SUPPORT RESEARCHERS IN PUBLISHING DIGITAL OUTPUTS VIA ALMA DIGITAL
 - Testing to [define and diagnose IIIF functionality issues with Alma Digital](https://aeh0.github.io/experiiiments/2022/08/08/universal-viewer.html) following an update by the supplier (Ex Libris). 
 - Developing and [documenting short-term workarounds](https://aeh0.github.io/experiiiments/2022/09/13/universal-viewer-2.html) to allow the successful delivery of time-sensitive projects affected by this failure of functionality.
 - Extensive liaison and network building with relevant technical communities to obtain guidance and support with these issues. I have reached out to Ex Libris developers, as well as Alma Digital, IIIF, and Universal Viewer user communities via Twitter and Slack.
@@ -19,7 +19,7 @@ NEW LIBRARY SERVICE AND TRAINING TO SUPPORT RESEARCHERS IN PUBLISHING DIGITAL OU
 - Developing ingest workflows to support the load of content for [Crowd Cymru](https://archives.wales/2022/08/16/crowdcymru/) (a National Lottery-funded crowdsourcing project) and a student internship (School of Architecture), establishing the potential and limits of Alma Digital.
 - Continuing my involvement in the IIIF community. The [IIIF Consortium](https://iiif.io/) is run by just three key members of staff - I was recently asked to join the recruitment panel for the third staff member, alongside Emmanuelle Delmas-Glass, Collections Data Manager at Yale University. I am also a member of the Planning Committee for the IIIF Winter conference, alongside Mark Baggett, Head of Digital Initiatives at University of Tennessee. Since my Fellowship began, I have been appointed Chair of the [IIIF Archives Community Group](https://iiif.io/community/groups/archives/). The group hosts meetings attended by the global IIIF community, featuring presentations and discussions relating to the intersection of IIIF and archives. In this role, I have aimed to increased engagement with IIIF among digital practitioners working in archives in the UK. Over the last three meetings, overall attendance has quadrupled, and attendance from UK representatives has increased from none to 50% to 90%.
 
-TRAINING IN DIGITAL EXHIBITION TOOLS AND DH TOOLS
+WORKSTREAM 2: TRAINING IN DIGITAL EXHIBITION TOOLS AND DH TOOLS
 - Completing self-guided training in GitHub and Jekyll to set up a [static website to use as a blog](https://aeh0.github.io/experiiiments/2022/08/04/blog-like-a-hacker.html). As well as using this to document progress, it has formed part of my research – a proof of concept model for delivering free, secure hosting without adverts or branding.
 - Developing a proof of concept [Xerte-hosted website](https://xerte.cardiff.ac.uk/play_17356#page1) to support a student internship in the School of Welsh, testing its functionality and limitations.
 - Requirements gathering, design and delivery of a lecture on Digitisation and Digital Archives for all postgraduate students in the School of History, Archaeology and Religion, which has been authorised as a mandatory research methods session for future years.
