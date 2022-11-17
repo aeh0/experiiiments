@@ -5,7 +5,9 @@ author: "Alison Harvey"
 date: 2022-11-17
 ---
 Below are the responses submitted for my progress update to RLUK and AHRC, ahead of our meeting on Tuesday 29 November. This provides an opportunity to reflect on my experiences, opportunities and challenges encountered during the fellowship, and how my research is enabling me to reflect on, and develop, my professional practice.
+
 <!--more-->
+
 **What are the main activities that you have undertaken as part of your fellowship to date? These might include literature reviews, research trips, or interviews.**
 
 NEW LIBRARY SERVICE AND TRAINING TO SUPPORT RESEARCHERS IN PUBLISHING DIGITAL OUTPUTS VIA ALMA DIGITAL
