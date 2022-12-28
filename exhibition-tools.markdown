@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Tools for online exhibitions and guided viewing
+title: Digital archives and exhibitions
 permalink: /exhibition-tools/
 ---
