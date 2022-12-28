@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Digital archives and exhibitions
+title: Digital archives and exhibition tools
 permalink: /digital-archives/
 ---
